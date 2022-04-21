@@ -1,0 +1,19 @@
+{
+    "name": "hfh-workflow-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/matthias-noetzli/hfh-workflow-test.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/matthias-noetzli/hfh-workflow-test/issues"
+    },
+    "homepage": "https://github.com/matthias-noetzli/hfh-workflow-test#readme"
+}
