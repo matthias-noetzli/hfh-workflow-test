@@ -36,7 +36,7 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
-            core.setFailed('wp_version not set')
+            core.setFailed('package_version is not set')
       - name: Check if versions are equal
         if: ${{ env.USES_PACKAGE_JSON && steps.wp_version.outputs.version != steps.package_json_version.outputs.version }}
         uses: actions/github-script@v3
