@@ -54,7 +54,7 @@ jobs:
         with:
           version: ${{ steps.previoustag.outputs.tag }}
       - name: Validate version
-        if:  ${{ steps.nexttags.outputs.major != steps.versionstrings.outputs.wp_version && steps.nexttags.outputs.minor != steps.versionstrings.outputs.wp_version && steps.nexttags.outputs.patch != steps.versionstrings.outputs.wp_version }} 
+        if:  ${{ steps.nexttags.outputs.major != steps.wp_version.outputs.version && steps.nexttags.outputs.minor != steps.wp_version.outputs.version && steps.nexttags.outputs.patch != steps.wp_version.outputs.version }} 
         uses: actions/github-script@v3
         with:
           script: |
