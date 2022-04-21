@@ -32,13 +32,13 @@ jobs:
           echo "Version: $PACKAGE_JSON_VERSION"
           echo "::set-output name=version::$PACKAGE_JSON_VERSION"
       - name: Check if package_json_version is set
-        if: ${{ $USES_PACKAGE_JSON && !steps.package_json_version.outputs.version }}
+        if: ${{ env.USES_PACKAGE_JSON && !steps.package_json_version.outputs.version }}
         uses: actions/github-script@v3
         with:
           script: |
             core.setFailed('wp_version not set')
       - name: Check if versions are equal
-        if: ${{ $USES_PACKAGE_JSON && steps.wp_version.outputs.version != steps.package_json_version.outputs.version }}
+        if: ${{ env.USES_PACKAGE_JSON && steps.wp_version.outputs.version != steps.package_json_version.outputs.version }}
         uses: actions/github-script@v3
         with:
           script: |
