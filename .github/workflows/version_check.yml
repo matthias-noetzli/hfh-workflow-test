@@ -26,7 +26,7 @@ jobs:
           script: |
             core.setFailed('wp_version not set')
       - id: package_json_version
-        if: $USES_PACKAGE_JSON
+        if: ${{ env.USES_PACKAGE_JSON }}
         run: |         
           PACKAGE_JSON_VERSION=$(npm pkg get version | sed 's/"//g')
           echo "Version: $PACKAGE_JSON_VERSION"
